@@ -1,0 +1,41 @@
+nav.navbar
+  .container-fluid
+    .navbar-header
+      a.navbar-brand(href='/') Tech-Dreamer
+    form.navbar-form.navbar-left(method='get' action='/search')
+      .form-group
+        input.form-control(type='text' name='q' placeholder='Seach...')
+        button.btn.btn-default(type='submit') Submit
+
+    ul.nav.navbar-nav.navbar-right
+      li.dropdown
+        a.dropdown-toggle(data-toggle='dropdown' href='#') Categories
+        ul.dropdown-menu
+          - for (var i = 0; i < categories.length; i++)
+            li
+              a(href='/products/'+categories[i]._id) #{categories[i].name}
+      if (!user)
+        li
+          a(href='/user/signup')
+            span.glyphicon.glyphicon-user
+            |  Sign Up
+        li
+          a(href='/login')
+            span.glyphicon.glyphicon-log-in
+            |  Login
+        li
+          a.btn.btn-lg(href="#")
+            span.glyphicon.glyphicon-shopping-cart
+            span.badge 0
+      else
+        li
+            a(href='/profile') #{user.profile.name}
+        li
+            a(href='/logout')
+                span.glyphicon.glyphicon-log-out
+                |  Logout
+        li
+          a.btn.btn-lg(href="#")
+            span.glyphicon.glyphicon-shopping-cart
+            span.badge #{cart}
+

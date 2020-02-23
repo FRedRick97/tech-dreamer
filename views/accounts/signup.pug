@@ -1,0 +1,27 @@
+extends ../layout.pug
+
+block content
+    .container.top
+        .row
+            div.col-lg-6.col-md-offset-3
+                if (errors.length > 0)
+                    .alert.alert-danger.alert-dismissible
+                      a.close(href='#' data-dismiss='alert' aria-label='close') &times;
+                      strong Oops!
+                      |  #{errors}
+
+                h1 Sign Up
+                form(method='post' id='form')
+                    div.form-group
+                        label(for="name") Name:
+                        input.form-control(type='text' name='name' placeholder='Enter Name')
+
+                    div.form-group
+                        label(for="password") Password:
+                        input.form-control(type='password' name='password'
+                        placeholder='Enter Password')
+
+                    div.form-group
+                        label(for="email") Email:
+                        input.form-control(type='email' name='email' placeholder='Enter Email ID')
+                    button.btn.btn-success(type='submit') Submit

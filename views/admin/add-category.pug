@@ -1,0 +1,23 @@
+extends ../layout.pug
+
+block content
+    .container.top
+        .row
+            div.col-lg-6.col-md-offset-3
+                if (message.length > 0)
+                    .alert.alert-success.alert-dismissible
+                      a.close(href='#' data-dismiss='alert' aria-label='close') &times;
+                      strong Success!
+                      |  #{message}
+                if (error.length > 0)
+                    .alert.alert-danger.alert-dismissible
+                      a.close(href='#' data-dismiss='alert' aria-label='close') &times;
+                      strong Oops!
+                      |  #{error}
+
+                h1 Add a new Category
+                form(method='post')
+                    div.form-group
+                        label(for="name") Name:
+                        input.form-control(type='text' name='name')
+                    button.btn.btn-success(type='submit') Submit

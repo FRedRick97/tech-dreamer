@@ -1,0 +1,19 @@
+extends ../layout.pug
+
+block content
+    div.row
+        div.col-lg-6.col-md-offset-3.center
+            if (message.length > 0)
+                .alert.alert-danger.alert-dismissible
+                  a.close(href='#' data-dismiss='alert' aria-label='close') &times;
+                  strong Oops!
+                  |  #{message}
+            h1 Login
+            form(method='post')
+                div.form-group
+                    label(for='email') Email:
+                    input.form-control(type='email' name='email')
+                div.form-group
+                    label(for='password') Password:
+                    input.form-control(type='password' name='password')
+                button.btn.btn-success(type='submit') Submit

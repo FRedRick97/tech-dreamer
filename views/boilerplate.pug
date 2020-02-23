@@ -1,0 +1,30 @@
+doctype html
+html
+head
+    title Jumbotron Template for Bootstrap
+    link(rel='stylesheet' type='text/css' href='/assets/css/bootstrap.min.css')
+    link(rel='stylesheet' type='text/javascript' href='/assets/js/bootstrap.min.js')
+
+body
+    nav.navbar.navbar-expand-sm.bg-dark.navbar-dark
+      ul.navbar-nav
+        li.nav-item.active
+          a.nav-link(href='#') Active
+        li.nav-item
+          a.nav-link(href='#') Link
+        li.nav-item
+          a.nav-link(href='#') Link
+        li.nav-item
+          a.nav-link.disabled(href='#') Disabled
+    div.row
+        div.col-lg-6.col-md-offset-3
+            form(method='post')
+                p Name
+                    input.form-control(type='text' name='name')
+                p Password
+                    input.form-control(type='password' name='password')
+                p Email
+                input.form-control(type='text' name='email')
+
+    footer.container
+      p &copy; 2018

@@ -1,0 +1,30 @@
+extends ../layout.pug
+
+block content
+    .container
+        .row.top
+            .col-md-4.holder2
+                img(src=image)
+            .col-md-4
+            .col-md-4
+                h3=product.name
+                h1 &#8377; #{product.price}
+                form(method='post' id='form')
+                    .btn-group(role='group' aria-label='...')
+                        input(type='hidden' name='quantity' id='quantity' value="1")
+                        button.btn.btn-default(type='button' id='minus') -
+                        button.btn.btn-default(type='button' id='total') 1
+                        button.btn.btn-default(type='button' id='plus') +
+
+                    .form-group
+                        input(type='hidden' name='product_id' id='quantity' value=product._id)
+                        input(type='hidden' name='productHidden' id='priceHidden' value=product._id)
+
+                        input.form-control(type='text' name='item' value=product.name)
+                        input.form-control(type='text' name='priceValue' value=product.price)
+
+                        if (user)
+                            button.btn.btn-primary(type='submit') Add to Cart
+                        else
+                            a.btn.btn-warning.btn-lg(href='/signup') Signup to begin buying!
+

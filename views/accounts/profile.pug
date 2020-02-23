@@ -1,0 +1,27 @@
+extends ../layout.pug
+
+block content
+    .container.top
+        .row
+            .col-sm-6.col-md-4
+                img.img-circle.img-responsive.img-center(src=user.profile.picture alt='profile picture')
+
+                br
+                p
+                    b Name:
+                    |  #{user.profile.name}
+                p
+                    b Email:
+                    |  #{user.email}
+                if (!user.address)
+                    p
+                        b Address:
+                        span.red  You have no address
+                else
+                    p
+                        b Address:
+                        |  #{user.address}
+
+                a.btn.btn-primary(href='/edit-profile' role="button") Edit Profile
+
+

@@ -1,0 +1,13 @@
+extends ../layout.pug
+block content
+    .container.top
+        .row
+            div.col-lg-6.col-md-offset-3
+                .holder
+                    img(src=img)
+                p
+                    b Product Name =
+                    | #{product.name}
+                p
+                    b Product Price =
+                    |  #{product.price}

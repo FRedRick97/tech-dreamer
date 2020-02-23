@@ -1,0 +1,180 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#wrapper {
+    position: relative;
+    width: 100%;
+    min-height:100%;
+    margin:0;
+    padding: 0;
+}
+
+.footer {
+    width:100%;
+    position: absolute;
+    bottom: 0;
+    background-color: #808080;
+    padding-top: 30px;
+    color: white;
+}
+nav {
+    position: fixed;
+    z-index: 1;
+}
+.navbar {
+    margin-bottom: 0 !important;
+}
+
+.wrapper {
+    padding: 0 10px;
+}
+
+.red {
+    font-weight: bold;
+    color: red;
+}
+
+.top {
+    margin-top: 2%;
+}
+
+.holder {
+    display: inline;
+}
+
+.holder img {
+    height: 150px;
+    width: 180px;
+}
+
+.holder2 {
+    display: inline;
+}
+
+.holder2 img {
+    height: 500px;
+    width: 500px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.thumbnail {
+    text-align: center;
+}
+
+header {
+    position: relative;
+    float: left; /*for desktop*/
+    margin: 0 0 30px 0;
+    padding: 10px 0 ;
+    width: 100%;
+    background-image: url('../images/tech-dreamer.jpg');
+    background-size: 1500px 1000px;
+    height: 600px;
+    background-repeat: no-repeat;
+
+}
+
+header a {
+    color: white;
+}
+header a:hover {
+    color: white;
+}
+
+#logo {
+    text-align: center;
+    margin: 0;
+    width: 100%;
+}
+.logo-center {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.outline {
+    position: absolute;
+    width: 300px;
+    height: 170px;
+    border: 1px solid white;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    margin-left: -150px;
+    margin-top: -85px;
+    background-color: #BDBDBD;
+    opacity: 0.7;
+}
+
+.outline a {
+    text-align: center;
+    width: 100%;
+}
+
+header a {
+    bottom: 0;
+}
+
+a#logo h1 {
+    margin-top: 50px;
+    letter-spacing: 4px;
+}
+
+.button {
+    font: bold 11px Arial;
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    border-radius: 2px;
+    border: 1px solid white;
+    font-size: 1em;
+    margin-left: 47%;
+  }
+
+  .page {
+    list-style-type: none;
+    margin: 20px 0;
+    padding: 0;
+}
+
+.page a {
+    float: left;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+}
+
+a:hover:not(.active) {
+    background-color: #ddd;
+}
+
+.active {
+    background-color: dodgerblue;
+    color: white;
+}
+
+.page a:first-child {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.page a:last-child {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.glyphicon-shopping-cart {
+    margin: 0 5px;
+}
+

@@ -1,0 +1,18 @@
+doctype html
+html
+head
+    title Tech-Dreamer
+    link(rel='stylesheet' type='text/css' href='/assets/css/bootstrap.min.css')
+    link(rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Arvo:400,700|Open+Sans:400,700,800" rel="stylesheet')
+    link(rel='stylesheet' type='text/css' href='/assets/css/style.css')
+    //- jQuery should be above bootstrap.min.js because it requires jQuery
+    script(src='/assets/js/jquery-3.3.1.min.js')
+    script(src='/assets/js/bootstrap.min.js')
+    script(src='/assets/js/script.js')
+
+
+body
+    include ./partials/navbar.pug
+    block content
+
+
